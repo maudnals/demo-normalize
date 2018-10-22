@@ -6,7 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "t": "^0.5.1",
-    "three": "^0.97.0"
+    "three": "^0.97.0",
+    "utils": "^0.3.1"
   },
   "devDependencies": {
     "sass": "^1.14.3"

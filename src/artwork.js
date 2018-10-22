@@ -1,5 +1,5 @@
-import { imgToCanvasData } from "./utils.canvas";
-import { saturation, hue, brightness, color } from "../utils.pixels";
+import { imgToCanvasData } from "./utils/utils.canvas";
+import { saturation, hue, brightness, color } from "./utils/utils.pixels";
 
 document.addEventListener("DOMContentLoaded", function(event) {
   // DOM fully loaded and parsed
