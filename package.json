@@ -1,0 +1,14 @@
+{
+  "name": "normalize",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Maud Nalpas maud.nalpas@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "t": "^0.5.1",
+    "three": "^0.97.0"
+  },
+  "devDependencies": {
+    "sass": "^1.14.3"
+  }
+}
