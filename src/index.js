@@ -1,9 +1,8 @@
-import "./artwork.js";
 import "./scene.js";
+import "./artwork.js";
 
-// push
 // ramda
-// 1 file = 50 lines max
+// redux for img etc
 // use rotating speed as saturation, change background color
 // callback/async/await
 // different images
