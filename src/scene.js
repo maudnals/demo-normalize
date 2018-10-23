@@ -19,24 +19,45 @@ light.position.set(2, 2, 1).normalize();
 scene.add(light);
 
 const material = new t.MeshPhongMaterial({
-  // light
-  specular: 0xd76531,
-  // intermediate
-  color: new t.Color("rgb(161, 104, 108)"),
+  specular: 0xfdfdfd,
+  color: new t.Color("rgb(255, 0, 0)"),
   // dark
   emissive: 0x8c2317,
   wireframe: false
 });
+
 const geometry = new t.BoxGeometry(1, 1, 1);
-// const material = new t.MeshBasicMaterial({ color: 0x00ff00 });
 const cube = new t.Mesh(geometry, material);
 scene.add(cube);
 
-const animate = speed => {
-  requestAnimationFrame(animate);
-  cube.rotation.x += 0.005;
-  cube.rotation.y += 0.005;
-  renderer.render(scene, camera);
-};
+document.addEventListener("calculationDone", function(event) {
+  const { colors, saturation, hue } = event.detail;
 
+  console.log(hue);
+
+  scene.background = new t.Color(
+    `rgb(${Math.round(colors.r * 1.1)}, ${Math.round(
+      colors.g * 1.1
+    )}, ${Math.round(colors.b * 1.1)})`
+  );
+
+  console.log(`rgb(${colors.r}, ${colors.g}, ${colors.b})`);
+
+  cube.material = new t.MeshPhongMaterial({
+    specular: new t.Color("rgb(0, 50, 170)"),
+    color: new t.Color(`rgb(${colors.r}, ${colors.g}, ${colors.b})`),
+    // emissive: 0x8c2317,
+    wireframe: false
+  });
+  window.speed = saturation / 8;
+});
+
+const animate = () => {
+  requestAnimationFrame(animate);
+  if (cube) {
+    cube.rotation.x += window.speed || 0.01;
+    cube.rotation.y += window.speed || 0.01;
+    renderer.render(scene, camera);
+  }
+};
 animate();

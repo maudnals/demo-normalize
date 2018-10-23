@@ -1,32 +1,52 @@
 import { imgToCanvasData } from "./utils/utils.canvas";
 import { saturation, hue, brightness, color } from "./utils/utils.pixels";
-const imgSrc = require("../assets/img/flashy.jpg");
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  // DOM fully loaded and parsed
+const imgSrcs = [
+  require("../assets/img/flashy.jpg"),
+  require("../assets/img/photo.jpg"),
+  require("../assets/img/liquor.jpg"),
+  require("../assets/img/tree.jpg"),
+  require("../assets/img/cakes.jpg"),
+  require("../assets/img/tree-pink.jpg"),
+  require("../assets/img/squares.jpg")
+];
 
+const go = () => {
   const img = new Image();
-  img.src = imgSrc;
+  img.src = imgSrcs[window.currentIndex % imgSrcs.length];
 
   img.addEventListener("load", () => {
     const imgEl = document.getElementById("my-img");
-    imgEl.src = imgSrc;
+    imgEl.src = img.src;
 
-    console.log("loaded");
     const data = imgToCanvasData(imgEl);
 
     const s = saturation(data);
-    console.log(s);
 
     const b = brightness(data);
-    console.log(b);
 
     const h = hue(data);
-    console.log(h);
-
     const c = color(data);
-    console.log(c);
+
+    const event = new CustomEvent("calculationDone", {
+      detail: {
+        hue: h,
+        brightness: b,
+        saturation: s,
+        colors: c
+      }
+    });
+    document.dispatchEvent(event);
   });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  // DOM fully loaded and parsed
+  window.currentIndex = 0;
+  go();
 });
 
-document.addEventListener("calculationDone", function(event) {});
+document.addEventListener("keydown", function(event) {
+  window.currentIndex++;
+  go();
+});
