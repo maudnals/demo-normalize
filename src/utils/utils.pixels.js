@@ -51,9 +51,9 @@ export const color = rgbaData => {
     colors.b.push(rgbData[i + 2]);
   }
   colors = {
-    r: average(colors.r),
-    g: average(colors.g),
-    b: average(colors.b)
+    r: Math.round(average(colors.r)),
+    g: Math.round(average(colors.g)),
+    b: Math.round(average(colors.b))
   };
   return colors;
 };
