@@ -1,30 +1,31 @@
 import { imgToCanvasData } from "./utils/utils.canvas";
+import { hue, brightness, saturation, color } from "./utils/utils.pixels";
 import { saturation, hue, brightness, color } from "./utils/utils.pixels";
 
 const imgSrcs = [
-  require("../assets/img/flashy.jpg"),
-  require("../assets/img/photo.jpg"),
-  require("../assets/img/liquor.jpg"),
-  require("../assets/img/tree.jpg"),
-  require("../assets/img/cakes.jpg"),
-  require("../assets/img/tree-pink.jpg"),
-  require("../assets/img/squares.jpg")
+  require("../assets/imgs/flashy.jpg"),
+  require("../assets/imgs/photo.jpg"),
+  require("../assets/imgs/liquor.jpg"),
+  require("../assets/imgs/tree.jpg"),
+  require("../assets/imgs/cakes.jpg"),
+  require("../assets/imgs/tree-pink.jpg"),
+  require("../assets/imgs/squares.jpg")
 ];
 
-const go = () => {
+
+let currentImgIndex = 0;
+
+const go = currentImgIndex => {
   const img = new Image();
-  img.src = imgSrcs[window.currentIndex % imgSrcs.length];
+  img.src = imgSrcs[currentImgIndex % imgSrcs.length];
 
   img.addEventListener("load", () => {
     const imgEl = document.getElementById("my-img");
     imgEl.src = img.src;
 
     const data = imgToCanvasData(imgEl);
-
     const s = saturation(data);
-
     const b = brightness(data);
-
     const h = hue(data);
     const c = color(data);
 
@@ -42,11 +43,10 @@ const go = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // DOM fully loaded and parsed
-  window.currentIndex = 0;
-  go();
+  go(currentImgIndex);
 });
 
 document.addEventListener("keydown", function(event) {
-  window.currentIndex++;
-  go();
+  currentImgIndex++;
+  go(currentImgIndex);
 });
