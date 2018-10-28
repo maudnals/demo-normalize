@@ -1,6 +1,6 @@
 import { imgToCanvasData } from "./utils/utils.canvas";
 import { hue, brightness, saturation, color } from "./utils/utils.pixels";
-import { saturation, hue, brightness, color } from "./utils/utils.pixels";
+import { add } from "./math.rs";
 
 const imgSrcs = [
   require("../assets/imgs/flashy.jpg"),
@@ -12,6 +12,7 @@ const imgSrcs = [
   require("../assets/imgs/squares.jpg")
 ];
 
+console.log(add(1, 20));
 
 let currentImgIndex = 0;
 
