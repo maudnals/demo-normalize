@@ -1,7 +1,8 @@
 # demo-normalize 
 
-A web app that normalizes artworks into a WebGL scene. 
-The WEBGL scene's geomerty is always the same, but its features are influenced by the artwork displayed at its side.
+A web app that normalizes artworks into a WebGL scene.  
+The scene's geomerty is always the same, but its features are influenced by the artwork displayed at its side.  
+Hence all artworks are "normalized", reduced to a basic form.
 
 ## Demo:  
 
