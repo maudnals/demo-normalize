@@ -12,10 +12,10 @@ A web app that normalizes artworks into a WebGL scene - the WEBGL scene is alway
 ## Artists credits 
 
 * Christian Marclay, Good Liquor Caused My Heart for to Sing, 2015 // https://www.sfmoma.org/artwork/2017.48.3.A-B
-* tree: https://www.sfmoma.org/artwork/2010.197
-* cakes: https://www.sfmoma.org/artwork/73.52
-* tree pink: https://www.sfmoma.org/artwork/2017.73
-* squares: https://www.sfmoma.org/artwork/87.88
+* Wayne Thiebaud, Display Cakes, 1963 // https://www.sfmoma.org/artwork/73.52
+* Andrew Schoultz, Ten Thousand Leaves In Darkness, 2009 // https://www.sfmoma.org/artwork/2010.197
+* Richard Mayhew, Delusions, 2000 // https://www.sfmoma.org/artwork/2017.73
+* Harry Holtzman, Horizontal Volume, 1938-1946 // https://www.sfmoma.org/artwork/87.88
 
 ## Built with  
 * Parcel
