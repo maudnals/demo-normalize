@@ -1,6 +1,7 @@
 # demo-normalize 
 
-A web app that normalizes artworks into a WebGL scene - the WEBGL scene is always the same, only the  
+A web app that normalizes artworks into a WebGL scene. 
+The WEBGL scene's geomerty is always the same, but its features are influenced by the artwork displayed at its side.
 
 ## Demo:  
 
@@ -20,7 +21,7 @@ A web app that normalizes artworks into a WebGL scene - the WEBGL scene is alway
 ## Built with  
 * Parcel
 * WebGL 
-* Custom imge operations in JS, could be replaced by WASM for efficiency! 
+* Custom imge operations in JS, should be replaced by WASM for a better perf :)
 
 ## Start project 
 
