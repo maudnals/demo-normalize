@@ -7,7 +7,11 @@ Hence all artworks are "normalized", reduced to a basic form.
 ## Demo:  
 
 * The cube's rotation speed depends on overall artwork saturation 
-* The 3D scene's colors depend on the averaged color of the artwork. 
+* The 3D scene's colors depend on the averaged color of the artwork.  
+
+
+![Demo Normalize](https://raw.githubusercontent.com/maudnals/demo-normalize/49012eecbb96275fca056bcb259be0e034c34813/doc/demo.gif)
+
 
 
 
