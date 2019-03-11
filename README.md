@@ -1,6 +1,6 @@
 # demo-normalize 
 
-Normalize is a demo web app, that translates artworks into a WebGL scene.  
+Normalize is a demo web app, that **translates artworks into a WebGL scene**.  
 The scene's geomerty is always the same, but its features are influenced by the artwork displayed at its side.  
 Hence all artworks are "normalized", reduced to a basic form.
 
@@ -9,10 +9,8 @@ Hence all artworks are "normalized", reduced to a basic form.
 <img width="460" height="300" src="https://raw.githubusercontent.com/maudnals/demo-normalize/49012eecbb96275fca056bcb259be0e034c34813/doc/demo.gif">
 </p> 
 
-* The cube's rotation speed depends on overall artwork saturation;
-* The 3D scene's colors depend on the averaged color of the artwork.  
-
-
+* The cube's **rotation speed** depends on overall artwork saturation;
+* The 3D scene's **colors** depend on the averaged color of the artwork.  
 
 
 ## Artists credits 
@@ -26,7 +24,7 @@ Hence all artworks are "normalized", reduced to a basic form.
 ## Built with  
 * Parcel
 * WebGL 
-* Custom imge operations in JS, should be replaced by WASM for a better perf :)
+* Custom imge operations in JS, should be replaced by Wasm for a better perf :)
 
 ## Start project 
 
