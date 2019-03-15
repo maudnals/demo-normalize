@@ -1,8 +1,7 @@
 # demo-normalize 
 
 Normalize is a demo web app, that **translates artworks into a WebGL scene**.  
-The scene's geomerty is always the same, but its features are influenced by the artwork displayed at its side.  
-Hence all artworks are "normalized", reduced to a basic form.
+The scene's geomerty is always the same, but its features depend on the artwork displayed at its side.
 
 ## Demo:  
 <p align="center">
