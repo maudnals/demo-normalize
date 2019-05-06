@@ -1,11 +1,8 @@
-import "./scene.js";
-import "./artwork.js";
+import './scene.js';
+import './artwork.js';
 
-// ramda
+// ts
 // redux for img etc
-// use rotating speed as saturation, change background color
-// callback/async/await
-// different images
-// profiling
-// dairy
 // turn pixel functions into wasm via walt and rust
+// overview page
+// more data

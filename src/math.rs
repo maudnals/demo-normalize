@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // extern crate math
 // // #![feature(use_extern_macros)]
 
@@ -47,3 +48,10 @@
 // // export const average = arr => {
 // //   return arr.filter(withoutNaNs).reduce(sum, 0) / arr.length;
 // // };*/
+
+use std::f64;
+
+#[no_mangle]
+pub fn add(a: f64, b: f64) -> f64 {
+  return a + b
+}
