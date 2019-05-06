@@ -1,4 +1,4 @@
-import { average } from "./utils.maths";
+import { average } from './utils.maths';
 
 const MAX_BRIGHTNESS = 255;
 
@@ -29,6 +29,8 @@ const calculator = (rgbaData, f, normalizer = 1) => {
   }
   return average(arr) / normalizer;
 };
+
+export const averageRgb = rgbaData => average(rgbasToRgbs(rgbaData));
 
 export const hue = rgbaData => {
   return calculator(rgbaData, pixelHue);
