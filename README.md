@@ -3,7 +3,7 @@
 Normalize is a demo web app, that **translates artworks into a WebGL scene**.  
 The scene's geomerty is always the same, but its features depend on the artwork displayed at its side.
 
-## Demo:  
+## Demo  
 <p align="center">
 <img width="460" height="300" src="https://raw.githubusercontent.com/maudnals/demo-normalize/49012eecbb96275fca056bcb259be0e034c34813/doc/demo.gif">
 </p> 
@@ -31,3 +31,10 @@ The scene's geomerty is always the same, but its features depend on the artwork 
 npm install
 parcel serve index.html --public-url /
 ```
+
+## Feature ideas
+Color
+Histogram (contrast)
+Signal to noise ratio 
+Symetry
+https://stackoverflow.com/questions/23213390/calculate-brighness-contrast-hue-and-saturation-level-in-an-image-using-java
