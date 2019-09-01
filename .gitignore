@@ -1,6 +1,12 @@
-dist/
+# Node
 node_modules/
+
+# Build
+dist/
 .cache/
 /target
 **/*.rs.bk
 src/add
+
+# VSCode
+settings.json
