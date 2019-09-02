@@ -19,24 +19,25 @@ The scene's geomerty is always the same, but its features depend on the artwork 
 * Richard Mayhew, Delusions, 2000 // https://www.sfmoma.org/artwork/2017.73
 * Harry Holtzman, Horizontal Volume, 1938-1946 // https://www.sfmoma.org/artwork/87.88 
 
-## Roadmap/todos
-* use open images
-* refactor: arrow functions vs others
-* do some very cool pixel operations
-* turn pixel functions into wasm via rust or assemblyscript
-* use ts
-* use redux for img etc
-* overview page
-* display artist credits 
-* use more data from the images/ do something more spectacular 
-* use arrows to navigate and display this tip on screen
-* display text on screen to explain what's happening
-* make a cooler scene
-* make it overall cooler: use microphone, camera, make it interactive... ???
-* use some more COOL webGL effects such as shaky shake
-* ++++ document functions and files
-* more data, more cool pixel operations!!!
-* refactor: special functions for side effects!!! and dom commands!!!
+## Roadmap/todosuse open images
+- [ ] refactor: arrow functions vs others
+- [ ] refactor: special functions for side effects!!! and dom commands!!!
+- [ ] refactor: turn pixel functions into wasm via rust or assemblyscript
+- [ ] refactor: async script?
+- [ ] refactor: use ts
+- [ ] refactor: move what can be to config file
+- [ ] refactor: use redux for img etc
+- [ ] refactor: separate data
+- [ ] doc: document functions and files
+- [ ] ui: use arrows to navigate and display this tip on screen
+- [ ] ui: display text on screen to explain what's happening
+- [ ] do some more pixel operations (small coding challenge)
+- [ ] display artist credits 
+- [ ] use open images
+- [ ] use more data from the images/ do something more spectacular 
+- [ ] make a cooler scene
+- [ ] make it overall cooler: use microphone, camera, make it interactive... ???
+- [ ] use some more nice webGL effects such as shaky shake
 
 ## Built with  
 * Parcel

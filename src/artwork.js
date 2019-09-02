@@ -1,5 +1,6 @@
 import { imgToCanvasData } from "./utils/utils.canvas";
 import { hue, brightness, saturation, color } from "./utils/utils.pixels";
+import { KEY_NAVIGATE_FORWARD, KEY_NAVIGATE_BACKWARD } from "./config";
 
 const imgSrcs = [
   require("../assets/imgs/flashy.jpg"),
@@ -16,10 +17,10 @@ function imgIndexGeneratorFactory() {
   const MAX_INDEX = imgSrcs.length - 1;
   let currentImgIndex = MIN_INDEX;
   return keyType => {
-    if (keyType === "ArrowRight") {
+    if (keyType === KEY_NAVIGATE_FORWARD) {
       currentImgIndex =
         currentImgIndex === MAX_INDEX ? MIN_INDEX : currentImgIndex + 1;
-    } else if (keyType === "ArrowLeft") {
+    } else if (keyType === KEY_NAVIGATE_BACKWARD) {
       currentImgIndex =
         currentImgIndex === MIN_INDEX ? MAX_INDEX : currentImgIndex - 1;
     }
