@@ -26,7 +26,6 @@ function imgIndexGeneratorFactory() {
       currentImgIndex =
         currentImgIndex === MIN_INDEX ? MAX_INDEX : currentImgIndex - 1;
     }
-    console.log(currentImgIndex);
     return currentImgIndex;
   };
 }
