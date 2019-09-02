@@ -3,13 +3,12 @@ import { hue, brightness, saturation, color } from "./utils/utils.pixels";
 import { KEY_NAVIGATE_FORWARD, KEY_NAVIGATE_BACKWARD } from "./config";
 
 const imgSrcs = [
-  require("../assets/imgs/flashy.jpg"),
-  require("../assets/imgs/photo.jpg"),
-  require("../assets/imgs/liquor.jpg"),
-  require("../assets/imgs/tree.jpg"),
-  require("../assets/imgs/cakes.jpg"),
-  require("../assets/imgs/tree-pink.jpg"),
-  require("../assets/imgs/squares.jpg")
+  require("../assets/imgs/DT50.jpg"),
+  require("../assets/imgs/DP279448.jpg"),
+  require("../assets/imgs/DT51.jpg"),
+  require("../assets/imgs/flowers.jpg"),
+  require("../assets/imgs/camb.jpg"),
+  require("../assets/imgs/south.jpg")
 ];
 
 function imgIndexGeneratorFactory() {
