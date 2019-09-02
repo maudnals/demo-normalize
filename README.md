@@ -23,7 +23,7 @@ The scene's geomerty is always the same, but its features depend on the artwork 
 - [ ] refactor: arrow functions vs others
 - [ ] refactor: special functions for side effects!!! and dom commands!!!
 - [ ] refactor: turn pixel functions into wasm via rust or assemblyscript
-- [ ] refactor: async script?
+- [ ] refactor: async script in html?
 - [ ] refactor: use ts
 - [ ] refactor: move what can be to config file
 - [ ] refactor: use redux for img etc
