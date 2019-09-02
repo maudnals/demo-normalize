@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // // extern crate math
 // // #![feature(use_extern_macros)]
 
