@@ -29,10 +29,10 @@ The scene's geomerty is always the same, but its features depend on the artwork 
 - [ ] refactor: use redux for img etc
 - [ ] refactor: separate data
 - [ ] doc: document functions and files
-- [ ] ui: use arrows to navigate and display this tip on screen
-- [ ] ui: display text on screen to explain what's happening
+- [ ] use arrows to navigate and display this tip on screen
+- [ ] display text on screen to explain what's happening
 - [ ] do some more pixel operations (small coding challenge)
-- [ ] display artist credits 
+- [ ] display artist credits  / image data
 - [ ] use open images
 - [ ] use more data from the images/ do something more spectacular 
 - [ ] make a cooler scene
