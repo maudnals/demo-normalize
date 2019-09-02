@@ -3,6 +3,7 @@ $breakpoint: 600px;
 body {
   // todo improve, this 600 should be at one spot only
   --breakpoint: 600;
+  --btn-height: 3rem;
   display: flex;
   background: black;
   margin: 0;
@@ -10,6 +11,7 @@ body {
   width: 100vw;
   height: 100vh;
   flex-direction: column;
+  font-size: 14px;
 }
 
 .img-wrapper {
@@ -47,9 +49,41 @@ img {
 @media (min-width: $breakpoint) {
   body {
     flex-direction: row;
+    --btn-height: 20px;
   }
   .img-wrapper {
     height: 100%;
     width: 50vw;
+  }
+}
+
+// Utils
+
+.arrow-button-bar {
+  --width: 6rem;
+  height: var(--btn-height);
+  position: absolute;
+  bottom: 0.4rem;
+  width: var(--width);
+  left: calc(50vw - var(--width) / 2);
+  background: rgba(0, 0, 0, 0.555);
+  border-radius: 100px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 1rem;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+    &:hover {
+      color: #3aff3a;
+    }
+    &:active {
+      color: #3aff3a;
+    }
   }
 }
