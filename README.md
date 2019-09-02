@@ -42,6 +42,7 @@ The scene's geomerty is always the same, but its features depend on the artwork 
 - [ ] automate artowrk infprmation retrieval -- write a scraper in node JS!
 - [ ] support mobile devices: viewport, resize screen, but also buttons instead of arrows
 - [ ] add window resize event
+- [ ] why is image animation happening only certain times?
 
 ## Built with  
 * Parcel
