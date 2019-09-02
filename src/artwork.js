@@ -1,6 +1,6 @@
 import { imgToCanvasData } from "./utils/utils.canvas";
 import { hue, brightness, saturation, color } from "./utils/utils.pixels";
-import { KEY_NAVIGATE_FORWARD, KEY_NAVIGATE_BACKWARD } from "./config";
+import { KEY_NAVIGATE_NEXT, KEY_NAVIGATE_PREVIOUS } from "./config";
 
 const imgSrcs = [
   require("../assets/imgs/DT50.jpg"),
@@ -11,18 +11,22 @@ const imgSrcs = [
   require("../assets/imgs/south.jpg")
 ];
 
+const PREVIOUS = "previous";
+const NEXT = "next";
+
 function imgIndexGeneratorFactory() {
   const MIN_INDEX = 0;
   const MAX_INDEX = imgSrcs.length - 1;
   let currentImgIndex = MIN_INDEX;
-  return keyType => {
-    if (keyType === KEY_NAVIGATE_FORWARD) {
+  return navDirection => {
+    if (navDirection === NEXT) {
       currentImgIndex =
         currentImgIndex === MAX_INDEX ? MIN_INDEX : currentImgIndex + 1;
-    } else if (keyType === KEY_NAVIGATE_BACKWARD) {
+    } else if (navDirection === PREVIOUS) {
       currentImgIndex =
         currentImgIndex === MIN_INDEX ? MAX_INDEX : currentImgIndex - 1;
     }
+    console.log(currentImgIndex);
     return currentImgIndex;
   };
 }
@@ -65,5 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("keydown", function(event) {
-  go(imgIndexGenerator(event.key));
+  if (event.key === KEY_NAVIGATE_NEXT || KEY_NAVIGATE_PREVIOUS) {
+    const direction = event.key === KEY_NAVIGATE_NEXT ? NEXT : PREVIOUS;
+    go(imgIndexGenerator(direction));
+  }
+});
+
+const buttonNext = document.getElementById("buttonNext");
+buttonNext.addEventListener("click", () => {
+  go(imgIndexGenerator(NEXT));
+});
+
+const buttonPrevious = document.getElementById("buttonPrevious");
+buttonPrevious.addEventListener("click", () => {
+  go(imgIndexGenerator(PREVIOUS));
 });

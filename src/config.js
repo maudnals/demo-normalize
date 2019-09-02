@@ -1,2 +1,2 @@
-export const KEY_NAVIGATE_FORWARD = "ArrowRight";
-export const KEY_NAVIGATE_BACKWARD = "ArrowLeft";
+export const KEY_NAVIGATE_NEXT = "ArrowRight";
+export const KEY_NAVIGATE_PREVIOUS = "ArrowLeft";
