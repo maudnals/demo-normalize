@@ -1,16 +1,28 @@
 import * as t from "three";
 
-const scene = new t.Scene();
-const camera = new t.PerspectiveCamera(
-  75,
-  window.innerWidth / 2 / window.innerHeight,
-  0.1,
-  1000
+const windowWidth = window.innerWidth;
+
+const breakpointInPx = parseInt(
+  getComputedStyle(document.body).getPropertyValue("--breakpoint")
 );
-camera.position.z = 4;
+
+const scene = new t.Scene();
 
 const renderer = new t.WebGLRenderer();
-renderer.setSize(window.innerWidth / 2, window.innerHeight);
+
+let ratio = 0;
+
+if (windowWidth < breakpointInPx) {
+  ratio = (window.innerWidth / window.innerHeight) * 2;
+  renderer.setSize(window.innerWidth, window.innerHeight / 2);
+} else {
+  ratio = window.innerWidth / 2 / window.innerHeight;
+  renderer.setSize(window.innerWidth / 2, window.innerHeight);
+}
+
+const camera = new t.PerspectiveCamera(75, ratio, 0.1, 1000);
+camera.position.z = 4;
+
 document.body.appendChild(renderer.domElement);
 
 const light = new t.DirectionalLight(0xfdfdfd, 2);

@@ -1,29 +1,34 @@
+$breakpoint: 600px;
+
 body {
+  // todo improve, this 600 should be at one spot only
+  --breakpoint: 600;
+  display: flex;
   background: black;
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
+  flex-direction: column;
+}
+
+.img-wrapper {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
 
-  .img-wrapper {
-    width: 50vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .img-subwrapper {
-    width: 100%;
+.img-subwrapper {
+  width: 100%;
   height: 100%;
   overflow: hidden;
-  }
+}
 
-  img {
-    width: 100%;
+img {
+  width: 100%;
 }
 
 #imgForCalculations {
@@ -32,18 +37,19 @@ body {
 
 #imgForDisplay {
   width: 100%;
-    height: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center center;
   transform: scale(1.1);
   transition: background 0.5s cubic-bezier(0.21, 1.3, 1, 1);
-  }
+}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@media (min-width: $breakpoint) {
+  body {
+    flex-direction: row;
   }
-  to {
-    opacity: 100;
+  .img-wrapper {
+    height: 100%;
+    width: 50vw;
   }
 }
