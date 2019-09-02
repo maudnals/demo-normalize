@@ -38,6 +38,10 @@ The scene's geomerty is always the same, but its features depend on the artwork 
 - [ ] make a cooler scene
 - [ ] make it overall cooler: use microphone, camera, make it interactive... ???
 - [ ] use some more nice webGL effects such as shaky shake
+- [ ] use background position so that image is always nicely displayed
+- [ ] automate artowrk infprmation retrieval -- write a scraper in node JS!
+- [ ] support mobile devices
+- [ ] add window resize event
 
 ## Built with  
 * Parcel
