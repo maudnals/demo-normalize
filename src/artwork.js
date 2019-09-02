@@ -34,9 +34,13 @@ const go = imgIndex => {
   img.src = imgSrcs[imgIndex];
 
   img.addEventListener("load", () => {
-    const imgEl = document.getElementById("my-img");
-    imgEl.src = img.src;
+    // display image
+    const imgElDisplay = document.getElementById("imgForDisplay");
+    imgElDisplay.style.backgroundImage = `url(${img.src})`;
 
+    // fill canvas with image data and calculate
+    const imgEl = document.getElementById("imgForCalculations");
+    imgEl.src = img.src;
     const data = imgToCanvasData(imgEl);
     const s = saturation(data);
     const b = brightness(data);
