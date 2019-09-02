@@ -1,24 +1,33 @@
-export default imgs = [
-  {
-    src: require("../assets/img/flashy.jpg"),
-    title:
-      "Three Color Curl (CMY: Irvine, California, August 25th 2008, Fuji Crystal Archive Type C)",
-    artist: "Walead Beshty",
-    dateCreated: "2008",
-    medium: "chromogenic print",
-    dimensionsCm: "249.56 x 127",
-    copyright: "© Walead Beshty",
-    permanentURL: "https://www.sfmoma.org/artwork/2010.101",
-    status: "Not on view at this time"
-  },
-  require("../assets/img/flashy.jpg"),
-  require("../assets/img/photo.jpg"),
-  require("../assets/img/liquor.jpg"),
-  require("../assets/img/tree.jpg"),
-  require("../assets/img/cakes.jpg"),
-  require("../assets/img/tree-pink.jpg"),
-  require("../assets/img/squares.jpg")
-];
+// New data:
+// https://www.metmuseum.org/art/collection/search/459094?&searchField=All&when=A.D.+1900-present&ft=*&offset=240&rpp=80&amp;pos=262
+// https://www.metmuseum.org/art/collection/search/62511?&searchField=All&when=A.D.+1900-present&ft=*&offset=160&rpp=80&amp;pos=239
+// https://www.metmuseum.org/art/collection/search/437379?&searchField=All&when=A.D.+1900-present&ft=*&offset=160&rpp=80&amp;pos=224
+// https://www.metmuseum.org/art/collection/search/438822?&searchField=All&when=A.D.+1900-present&what=Paintings&ft=*&offset=80&rpp=80&amp;pos=85
+// https://www.metmuseum.org/art/collection/search/483434?&searchField=All&when=A.D.+1900-present&what=Paintings&ft=*&offset=0&rpp=20&amp;pos=9
+// https://www.metmuseum.org/art/collection/search/380531?&searchField=All&when=A.D.+1900-present&ft=*&offset=0&rpp=80&amp;pos=17
+// https://www.metmuseum.org/art/collection/search#!?showOnly=openAccess&offset=240&pageSize=0&sortOrder=asc&perPage=80&searchField=All&era=A.D.%201900-present
+
+// export default imgs = [
+//   {
+//     src: require("../assets/img/flashy.jpg"),
+//     title:
+//       "Three Color Curl (CMY: Irvine, California, August 25th 2008, Fuji Crystal Archive Type C)",
+//     artist: "Walead Beshty",
+//     dateCreated: "2008",
+//     medium: "chromogenic print",
+//     dimensionsCm: "249.56 x 127",
+//     copyright: "© Walead Beshty",
+//     permanentURL: "https://www.sfmoma.org/artwork/2010.101",
+//     status: "Not on view at this time"
+//   },
+//   require("../assets/img/flashy.jpg"),
+//   require("../assets/img/photo.jpg"),
+//   require("../assets/img/liquor.jpg"),
+//   require("../assets/img/tree.jpg"),
+//   require("../assets/img/cakes.jpg"),
+//   require("../assets/img/tree-pink.jpg"),
+//   require("../assets/img/squares.jpg")
+// ];
 
 // <!-- Artwork Info
 // Artwork title
