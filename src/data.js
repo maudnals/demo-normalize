@@ -7,6 +7,22 @@
 // https://www.metmuseum.org/art/collection/search/380531?&searchField=All&when=A.D.+1900-present&ft=*&offset=0&rpp=80&amp;pos=17
 // https://www.metmuseum.org/art/collection/search#!?showOnly=openAccess&offset=240&pageSize=0&sortOrder=asc&perPage=80&searchField=All&era=A.D.%201900-present
 
+// flowers: https://www.metmuseum.org/art/collection/search/44596?&searchField=All&sortBy=Relevance&when=A.D.+1900-present&ft=*&offset=80&rpp=80&amp;pos=118
+
+//kirche:
+// https://www.metmuseum.org/art/collection/search/647787?&searchField=All&sortBy=Relevance&when=A.D.+1900-present&ft=*&offset=0&rpp=80&amp;pos=35
+
+// gipsy: https://www.metmuseum.org/art/collection/search/264528?&searchField=All&sortBy=Relevance&when=A.D.+1900-present&ft=*&offset=0&rpp=80&amp;pos=39
+
+// japan sea: https://www.metmuseum.org/art/collection/search/55612?&searchField=All&sortBy=Relevance&when=A.D.+1900-present&ft=*&offset=0&rpp=80&amp;pos=53
+
+// prisoner https://www.metmuseum.org/art/collection/search/55368?&searchField=All&sortBy=Relevance&when=A.D.+1900-present&ft=*&offset=0&rpp=80&amp;pos=71
+
+// buzz
+// https://www.metmuseum.org/art/collection/search/786297?&searchField=All&sortBy=Relevance&when=A.D.+1900-present&ft=*&offset=0&rpp=80&amp;pos=69
+
+// prisoner https://www.metmuseum.org/art/collection/search/55368?&searchField=All&sortBy=Relevance&when=A.D.+1900-present&ft=*&offset=0&rpp=80&amp;pos=71
+
 // export default imgs = [
 //   {
 //     src: require("../assets/img/flashy.jpg"),

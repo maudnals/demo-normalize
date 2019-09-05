@@ -4,11 +4,17 @@ import { KEY_NAVIGATE_NEXT, KEY_NAVIGATE_PREVIOUS } from "./config";
 
 const imgSrcs = [
   require("../assets/imgs/DT50.jpg"),
+  require("../assets/imgs/flowers2.jpg"),
   require("../assets/imgs/DP279448.jpg"),
+  require("../assets/imgs/buzz.jpg"),
   require("../assets/imgs/DT51.jpg"),
   require("../assets/imgs/flowers.jpg"),
   require("../assets/imgs/camb.jpg"),
-  require("../assets/imgs/south.jpg")
+  require("../assets/imgs/south.jpg"),
+  require("../assets/imgs/kirche.jpg"),
+  require("../assets/imgs/gipsy.jpg"),
+  require("../assets/imgs/japan.jpg"),
+  require("../assets/imgs/prisoner.jpg")
 ];
 
 const PREVIOUS = "previous";
