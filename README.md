@@ -20,29 +20,53 @@ The scene's geomerty is always the same, but its features depend on the artwork 
 * Harry Holtzman, Horizontal Volume, 1938-1946 // https://www.sfmoma.org/artwork/87.88 
 
 ## Roadmap/todosuse open images
-- [ ] refactor: arrow functions vs others
-- [ ] refactor: special functions for side effects!!! and dom commands!!!
-- [ ] refactor: turn pixel functions into wasm via rust or assemblyscript
-- [ ] refactor: async script in html?
-- [ ] refactor: use ts
-- [ ] refactor: move what can be to config file
-- [ ] refactor: use redux for img etc
-- [ ] refactor: separate data
-- [ ] doc: document functions and files
-- [ ] use arrows to navigate and display this tip on screen
-- [ ] display text on screen to explain what's happening
-- [ ] do some more pixel operations (small coding challenge)
-- [ ] display artist credits  / image data
-- [ ] use open images
-- [ ] use more data from the images/ do something more spectacular 
-- [ ] make a cooler scene
-- [ ] make it overall cooler: use microphone, camera, make it interactive... ???
-- [ ] use some more nice webGL effects such as shaky shake
-- [ ] use background position so that image is always nicely displayed
-- [ ] automate artowrk infprmation retrieval -- write a scraper in node JS!
-- [ ] support mobile devices: viewport, resize screen, but also buttons instead of arrows
-- [ ] add window resize event
-- [ ] why is image animation happening only certain times?
+
+Refactor:
+
+* [ ] arrow functions vs others
+* [ ] clean ALL
+* [ ] special functions for side effects!!! and dom commands!!!
+* [ ] turn pixel functions into wasm via rust or assemblyscript
+* [ ] async script in html?
+* [ ] use ts
+* [ ] move what can be to config file
+* [ ] use redux for img etc
+* [ ] separate data
+
+Concept:
+
+* [ ] do some more pixel operations (small coding challenge)
+* [ ] use more data from the images/ do something more spectacular 
+* [ ] make a cooler scene: add balls and other effects
+* [ ] make it overall cooler: use microphone, camera, make it interactive... ???
+* [ ] use some more nice webGL effects such as shaky shake
+
+Doc:
+
+* [ ] document functions and files
+
+Bugs:
+
+* [ ] why is image animation happening only certain times?
+
+UI:
+
+* [ ] use background position so that image is always nicely displayed
+* [ ] support mobile devices: viewport, resize screen, but also buttons instead of arrows
+* [ ] add window resize event
+* [ ] add "noise" animation in between img changes
+* [ ] use arrows to navigate and display this tip on screen
+* [ ] display text on screen to explain what's happening
+
+Artworks:
+
+* [ ] use open images
+* [ ] display artist credits  / artwork information
+* [ ] automate artwork information retrieval -- write a scraper in node JS!
+
+Social:
+
+* [ ] publish on twitter
 
 ## Built with  
 * Parcel
