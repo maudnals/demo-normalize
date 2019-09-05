@@ -41,9 +41,10 @@ Concept:
 * [ ] make it overall cooler: use microphone, camera, make it interactive... ???
 * [ ] use some more nice webGL effects such as shaky shake
 
-Doc:
+Doc/chore:
 
 * [ ] document functions and files
+* [ ] lint
 
 Bugs:
 
@@ -51,7 +52,7 @@ Bugs:
 
 UI:
 
-* [ ] use background position so that image is always nicely displayed
+* [x] use background position so that image is always nicely displayed
 * [ ] support mobile devices: viewport, resize screen, but also buttons instead of arrows
 * [ ] add window resize event
 * [ ] add "noise" animation in between img changes
