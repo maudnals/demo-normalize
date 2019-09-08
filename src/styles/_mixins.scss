@@ -10,3 +10,11 @@
   background: var(--background-transp);
   color: var(--color);
 }
+
+@mixin invisible {
+  visibility: hidden;
+}
+
+@mixin undisplayed {
+  display: none;
+}

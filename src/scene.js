@@ -1,28 +1,36 @@
 import * as t from "three";
 
+let STARTED = false;
+
 const rgbArrToRgbStr = arr => `rgb(${arr[0]}, ${arr[1]}, ${arr[2]})`;
-
-const windowWidth = window.innerWidth;
-
-const breakpointInPx = parseInt(
-  getComputedStyle(document.body).getPropertyValue("--breakpoint-px")
-);
 
 const scene = new t.Scene();
 const renderer = new t.WebGLRenderer();
-let ratio = 0;
 
-if (windowWidth < breakpointInPx) {
-  ratio = (window.innerWidth / window.innerHeight) * 2;
-  renderer.setSize(window.innerWidth, window.innerHeight / 2);
-} else {
-  ratio = window.innerWidth / 2 / window.innerHeight;
-  renderer.setSize(window.innerWidth / 2, window.innerHeight);
-}
+const checkSmallScreen = () =>
+  window.innerWidth <
+  parseInt(getComputedStyle(document.body).getPropertyValue("--breakpoint-px"));
+
+const ratioF = () =>
+  STARTED
+    ? checkSmallScreen()
+      ? (window.innerWidth / window.innerHeight) * 2
+      : window.innerWidth / 2 / window.innerHeight
+    : window.innerWidth / window.innerHeight;
+
+const ratio = ratioF();
+
+const rendererSizeF = () =>
+  STARTED
+    ? checkSmallScreen()
+      ? [window.innerWidth, window.innerHeight / 2]
+      : [window.innerWidth / 2, window.innerHeight]
+    : [window.innerWidth, window.innerHeight];
+
+renderer.setSize(...rendererSizeF());
 
 const camera = new t.PerspectiveCamera(75, ratio, 0.1, 1000);
 camera.position.z = 4;
-
 document.body.appendChild(renderer.domElement);
 
 const light = new t.DirectionalLight(0xfdfdfd, 2);
@@ -30,23 +38,36 @@ const light = new t.DirectionalLight(0xfdfdfd, 2);
 light.position.set(2, 2, 1).normalize();
 scene.add(light);
 
+// create new cube
+const geometry = new t.BoxGeometry(2.8, 2.8, 2.8);
 const material = new t.MeshPhongMaterial({
-  specular: 0xfdfdfd,
-  color: new t.Color("rgb(255, 0, 0)"),
-  wireframe: false
+  color: new t.Color("rgb(80, 80, 80)")
 });
-
-const geometry = new t.BoxGeometry(1, 1, 1);
 const cube = new t.Mesh(geometry, material);
+scene.add(cube);
+
+const updateView = () => {
+  if (STARTED) {
+    document.getElementById("appIntro").classList.add("undisplayed");
+  }
+};
 
 document.addEventListener("calculationDone", function(event) {
-  const { brightness, saturation, dominantColors } = event.detail;
+  if (!STARTED) {
+    // todo refactor/improve to avoid intrisic knowledge
+    STARTED = true;
+    // update only when necessary
+    renderer.setSize(...rendererSizeF());
+    camera.aspect = ratioF();
+    // !important, otherwise view doesn't update
+    camera.updateProjectionMatrix();
+    updateView();
+    cube.geometry = new t.BoxGeometry(1, 1, 1);
+  }
 
+  const { brightness, saturation, dominantColors } = event.detail;
   const dominantColorsAsRgbStrs = dominantColors.map(d => rgbArrToRgbStr(d));
   scene.background = new t.Color(dominantColorsAsRgbStrs[2]);
-  console.log(brightness);
-  console.log(saturation);
-
   cube.material = new t.MeshPhongMaterial({
     specular: new t.Color(dominantColorsAsRgbStrs[1]),
     color: new t.Color(dominantColorsAsRgbStrs[0])
@@ -61,8 +82,8 @@ document.addEventListener("calculationDone", function(event) {
 const animate = () => {
   requestAnimationFrame(animate);
   if (cube) {
-    cube.rotation.x += window.speed || 0.01;
-    cube.rotation.y += window.speed || 0.01;
+    cube.rotation.x += window.speed || 0.003;
+    cube.rotation.y += window.speed || 0.003;
     renderer.render(scene, camera);
   }
 };

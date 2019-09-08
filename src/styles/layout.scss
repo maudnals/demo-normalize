@@ -1,5 +1,5 @@
 @import "./_variables";
-@import "./mixins";
+@import "./_mixins";
 
 body {
   width: 100vw;
@@ -28,7 +28,9 @@ img {
 }
 
 #imgForCalculations {
-  visibility: hidden;
+  @include invisible;
+  // !important: absolute so that the image has "space" aka a width, otherwise calculations won't work
+  @include abs;
 }
 
 #imgForDisplay {
@@ -55,6 +57,9 @@ img {
   width: var(--width);
   top: calc(50vh - 4rem);
   left: calc(50vw - var(--width) / 2);
+  &.undisplayed {
+    @include undisplayed;
+  }
 }
 
 @media (min-width: $breakpoint) {
