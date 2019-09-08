@@ -53,7 +53,7 @@ img {
   @include txtCenter;
   --width: 20rem;
   width: var(--width);
-  top: calc(50vh);
+  top: calc(50vh - 4rem);
   left: calc(50vw - var(--width) / 2);
 }
 

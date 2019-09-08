@@ -3,6 +3,12 @@
 
 a {
   color: var(--highlight-color);
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+  &:hover {
+    cursor: pointer;
+    color: var(--highlight-color-x);
+  }
 }
 
 button {
