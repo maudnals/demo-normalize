@@ -3,7 +3,7 @@ import * as t from "three";
 const windowWidth = window.innerWidth;
 
 const breakpointInPx = parseInt(
-  getComputedStyle(document.body).getPropertyValue("--breakpoint")
+  getComputedStyle(document.body).getPropertyValue("--breakpoint-px")
 );
 
 const scene = new t.Scene();
