@@ -23,9 +23,13 @@ function imgIndexGeneratorFactory(imgsCount) {
   };
 }
 
-const imgIndexGenerator = imgIndexGeneratorFactory();
+const imgIndexGenerator = imgIndexGeneratorFactory(Object.keys(imgs).length);
 
 const go = imgIndex => {
+  document.getElementById("artworkInfo").innerHTML = info[imgIndex]
+    ? `"${info[imgIndex].title}" - ${info[imgIndex].author}, ${info[imgIndex].year} ··· <a href="${info[imgIndex].openUrl}" target="_blank">More on ${info[imgIndex].src}</a>`
+    : "";
+
   const img = new Image();
   img.src = imgs[imgIds[imgIndex]];
   img.addEventListener("load", () => {
