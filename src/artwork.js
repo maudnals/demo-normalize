@@ -1,6 +1,7 @@
 import { imgToCanvasData } from "./utils/utils.canvas";
 import { hue, brightness, saturation, color } from "./utils/utils.pixels";
 import { KEY_NAVIGATE_NEXT, KEY_NAVIGATE_PREVIOUS } from "./config";
+const ColorThief = require("colorthief");
 
 const imgSrcs = [
   require("../assets/imgs/DT50.jpg"),
@@ -54,14 +55,15 @@ const go = imgIndex => {
     const s = saturation(data);
     const b = brightness(data);
     const h = hue(data);
-    const c = color(data);
+    // const c = color(data);
 
     const event = new CustomEvent("calculationDone", {
       detail: {
         hue: h,
         brightness: b,
         saturation: s,
-        colors: c
+        // colors: c,
+        dominantColors: ColorThief.default.prototype.getPalette(imgEl)
       }
     });
     document.dispatchEvent(event);
