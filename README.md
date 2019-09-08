@@ -9,9 +9,11 @@ The scene's geomerty is always the same, but its features depend on the artwork 
 </p>
 
 * The cube's **rotation speed** depends on overall artwork saturation;
-* The 3D scene's **colors** depend on the averaged color of the artwork.  
+* The 3D scene's **colors** depend on the average color of the artwork.  
 
-## Artists credits
+## Sources
+
+https://en.wikipedia.org/wiki/Cultural_homogenization 
 
 ## Roadmap/todosuse open images
 
@@ -39,13 +41,14 @@ Concept:
 * [ ] make a cooler scene: add balls and other effects
 * [ ] make it overall cooler: use microphone, camera, make it interactive... ???
 * [ ] use some more nice webGL effects such as shaky shake
-* [ ] use BOTH brightness and saturation
+* [ ] input data to use: brightness, saturation, Year, Technique, Joyful, Crop
 
 Doc/chore:
 
 * [ ] document functions and files
 * [ ] lint
 * [ ] answer questions doc
+* [ ] update README
 
 Bugs:
 
