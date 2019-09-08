@@ -1,3 +1,8 @@
+const c = color(data);
+// why was it taking so long?
+
+
+
 // import ColorThief from "../node_modules/colorthief/dist/color-thief"; // ok {getColor: ƒ, getPalette: ƒ}
 // import ColorThief from "../node_modules/colorthief/dist/color-thief.js"; // ok {getColor: ƒ, getPalette: ƒ}
 
