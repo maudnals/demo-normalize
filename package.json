@@ -5,6 +5,9 @@
   "author": "Maud Nalpas maud.nalpas@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "assets": "^3.0.1",
+    "color-thief": "^2.2.5",
+    "colorthief": "^2.3.0",
     "t": "^0.5.1",
     "three": "^0.97.0",
     "utils": "^0.3.1"
