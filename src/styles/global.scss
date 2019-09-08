@@ -1,0 +1,10 @@
+@import "./_variables";
+
+body {
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--color);
+  background: var(--background);
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,35 @@
+@import "./_mixins";
+@import "./_variables";
+
+a {
+  color: var(--highlight-color);
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+  font-size: inherit;
+  font-family: inherit;
+  height: var(--btn-height);
+  &:hover,
+  &:active {
+    color: var(--highlight-color);
+  }
+}
+
+.arrow-button-bar {
+  @include infoLabel;
+  @include abs;
+  --width: 6rem;
+  width: var(--width);
+  bottom: 0.5rem;
+  left: calc(50vw - var(--width) / 2);
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+}

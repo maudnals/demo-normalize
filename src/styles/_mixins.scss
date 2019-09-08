@@ -1,0 +1,12 @@
+@mixin txtCenter {
+  text-align: center;
+}
+
+@mixin abs {
+  position: absolute;
+}
+
+@mixin infoLabel {
+  background: var(--background-transp);
+  color: var(--color);
+}

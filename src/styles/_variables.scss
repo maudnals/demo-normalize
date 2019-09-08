@@ -1,0 +1,17 @@
+$breakpoint: 600px;
+
+body {
+  --background: black;
+  --background-transp: rgba(0, 0, 0, 0.6);
+  --color: white;
+  --highlight-color: #3aff3a;
+  // todo improve, this 600 should be at one spot only
+  --breakpoint-px: 600;
+  --btn-height: 3rem;
+}
+
+@media (min-width: $breakpoint) {
+  body {
+    --btn-height: 1.6rem;
+  }
+}

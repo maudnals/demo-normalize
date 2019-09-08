@@ -1,0 +1,81 @@
+@import "./_variables";
+@import "./mixins";
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.img-subwrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+#imgForCalculations {
+  visibility: hidden;
+}
+
+#imgForDisplay {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.03);
+  transition: background-image 0.5s cubic-bezier(0.21, 1.3, 1, 1);
+}
+
+#artworkInfo {
+  @include infoLabel;
+  @include txtCenter;
+  @include abs;
+  width: var(--width);
+  padding: 0.2rem;
+}
+
+#appIntro {
+  @include abs;
+  @include txtCenter;
+  --width: 20rem;
+  width: var(--width);
+  top: calc(50vh);
+  left: calc(50vw - var(--width) / 2);
+}
+
+@media (min-width: $breakpoint) {
+  body {
+    flex-direction: row;
+  }
+  .img-wrapper {
+    height: 100%;
+    width: 50vw;
+  }
+  #artworkInfo {
+    --width: 40%;
+    left: calc(25vw - var(--width) / 2);
+    bottom: 2rem;
+  }
+}
+
+@media (max-width: $breakpoint - 1px) {
+  #artworkInfo {
+    --width: 90%;
+    left: calc(50vw - var(--width) / 2);
+    top: calc(50vh - 4rem);
+  }
+}
