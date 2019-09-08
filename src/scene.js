@@ -40,7 +40,6 @@ const material = new t.MeshPhongMaterial({
 
 const geometry = new t.BoxGeometry(1, 1, 1);
 const cube = new t.Mesh(geometry, material);
-scene.add(cube);
 
 document.addEventListener("calculationDone", function(event) {
   const { colors, saturation, hue } = event.detail;
