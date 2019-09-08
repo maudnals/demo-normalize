@@ -2,28 +2,14 @@ import { imgToCanvasData } from "./utils/utils.canvas";
 import { hue, brightness, saturation, color } from "./utils/utils.pixels";
 import { KEY_NAVIGATE_NEXT, KEY_NAVIGATE_PREVIOUS } from "./config";
 const ColorThief = require("colorthief");
-
-const imgSrcs = [
-  require("../assets/imgs/DT50.jpg"),
-  require("../assets/imgs/flowers2.jpg"),
-  require("../assets/imgs/DP279448.jpg"),
-  require("../assets/imgs/buzz.jpg"),
-  require("../assets/imgs/DT51.jpg"),
-  require("../assets/imgs/flowers.jpg"),
-  require("../assets/imgs/camb.jpg"),
-  require("../assets/imgs/south.jpg"),
-  require("../assets/imgs/kirche.jpg"),
-  require("../assets/imgs/gipsy.jpg"),
-  require("../assets/imgs/japan.jpg"),
-  require("../assets/imgs/prisoner.jpg")
-];
+import { imgs, imgIds, info } from "./data";
 
 const PREVIOUS = "previous";
 const NEXT = "next";
 
-function imgIndexGeneratorFactory() {
+function imgIndexGeneratorFactory(imgsCount) {
   const MIN_INDEX = 0;
-  const MAX_INDEX = imgSrcs.length - 1;
+  const MAX_INDEX = imgsCount - 1;
   let currentImgIndex = MIN_INDEX;
   return navDirection => {
     if (navDirection === NEXT) {
@@ -41,8 +27,7 @@ const imgIndexGenerator = imgIndexGeneratorFactory();
 
 const go = imgIndex => {
   const img = new Image();
-  img.src = imgSrcs[imgIndex];
-
+  img.src = imgs[imgIds[imgIndex]];
   img.addEventListener("load", () => {
     // display image
     const imgElDisplay = document.getElementById("imgForDisplay");
