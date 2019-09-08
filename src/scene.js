@@ -1,4 +1,5 @@
 import * as t from "three";
+import { DEFAULT_ROTATION_SPEED } from "./config";
 
 let STARTED = false;
 
@@ -81,9 +82,9 @@ document.addEventListener("calculationDone", function(event) {
 
 const animate = () => {
   requestAnimationFrame(animate);
-  if (cube) {
-    cube.rotation.x += window.speed || 0.003;
-    cube.rotation.y += window.speed || 0.003;
+  if (cube && renderer) {
+    cube.rotation.x += window.speed || DEFAULT_ROTATION_SPEED;
+    cube.rotation.y += window.speed || DEFAULT_ROTATION_SPEED;
     renderer.render(scene, camera);
   }
 };

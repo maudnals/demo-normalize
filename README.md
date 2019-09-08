@@ -57,7 +57,7 @@ Bugs:
 UI:
 
 * [x] use background position so that image is always nicely displayed
-* [ ] support mobile devices: viewport, resize screen, but also buttons instead of arrows
+* [ ] support mobile devices: viewport, but also buttons instead of arrows
 * [ ] add window resize event
 * [ ] add "noise" animation in between img changes
 * [ ] use arrows to navigate and display this tip on screen
