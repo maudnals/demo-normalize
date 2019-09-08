@@ -55,11 +55,6 @@ const go = imgIndex => {
   });
 };
 
-// DOM fully loaded and parsed
-document.addEventListener("DOMContentLoaded", () => {
-  go(0);
-});
-
 document.addEventListener("keydown", function(event) {
   if (event.key === KEY_NAVIGATE_NEXT || KEY_NAVIGATE_PREVIOUS) {
     const direction = event.key === KEY_NAVIGATE_NEXT ? NEXT : PREVIOUS;
