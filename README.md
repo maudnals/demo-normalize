@@ -39,6 +39,7 @@ Concept:
 * [ ] make a cooler scene: add balls and other effects
 * [ ] make it overall cooler: use microphone, camera, make it interactive... ???
 * [ ] use some more nice webGL effects such as shaky shake
+* [ ] use BOTH brightness and saturation
 
 Doc/chore:
 

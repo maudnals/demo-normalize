@@ -1,0 +1,34 @@
+// import ColorThief from "../node_modules/colorthief/dist/color-thief"; // ok {getColor: ƒ, getPalette: ƒ}
+// import ColorThief from "../node_modules/colorthief/dist/color-thief.js"; // ok {getColor: ƒ, getPalette: ƒ}
+
+// import ColorThief from "color-thief";  // why doesn't this work?
+// import ColorThief from "../node_modules/colorthief/dist/color-thief.mjs";  // why doesn't this work?
+// import ColorThief from "../node_modules/colorthief/dist/color-thief.min.js"; // why doesn't this work?
+// when using require i need to do console.log(ColorThief.default.prototype.getPalette(imgEl));. why??
+// console.log(ColorThief);
+    // const colorThief = new ColorThief();
+    // const img = document.querySelector('img');
+
+    // // Make sure image is finished loading
+    // what is the complete attribute?
+
+    // if (imgEl.complete) {
+    //   console.log(ColorThief.default.prototype.getPalette(imgEl));
+    //   // console.log("getPalette", ColorThief.getPalette(imgEl));
+    // } else {
+    //   // image.addEventListener("load", function() {
+    //   //   colorThief.getColor(img);
+    //   // });
+    // }
+    
+// window.onload = function() {
+//   // why doesn't this work???
+//   console.log("go");
+//   go(0);
+// };
+
+// // DOM fully loaded and parsed
+// document.addEventListener("load", () => {
+//   console.log("go");
+//   go(0);
+// });
