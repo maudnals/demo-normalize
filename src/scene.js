@@ -72,7 +72,8 @@ document.addEventListener("calculationDone", function(event) {
   cube.material = new t.MeshPhongMaterial({
     specular: new t.Color(dominantColorsAsRgbStrs[1]),
     color: new t.Color(dominantColorsAsRgbStrs[0])
-    // emissive: new t.Color(dominantColor0),
+    // shininess: 100,
+    // emissive: new t.Color(dominantColorsAsRgbStrs[0])
     // wireframe: randomBoolean()
   });
   scene.add(cube);

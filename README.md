@@ -41,7 +41,11 @@ Concept:
 * [ ] make a cooler scene: add balls and other effects
 * [ ] make it overall cooler: use microphone, camera, make it interactive... ???
 * [ ] use some more nice webGL effects such as shaky shake
-* [ ] input data to use: brightness, saturation, Year, Technique, Joyful, Crop
+* [ ] input data to use: brightness, saturation, year, technique, joyfulness, keywords/labels:
+  * [ ] abstract or figurative // use google AI keywords: how many objects are recognized?
+  * [ ] consistent or surrealist // use google AI keywords + word2vec: how much distance between objects?
+  * [ ] alive // use google AI keywords + word2vec: label-person distance, label-animal distance...
+* [ ] output: emotion, level of detail, style... // try https://cloud.google.com/vision/ and https://ml5js.org/reference/api-Sentiment/
 
 Doc/chore:
 
